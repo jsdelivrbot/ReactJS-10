@@ -1,0 +1,163 @@
+%__btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    filter: opacity(.5);
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &:active {
+    // todo implement
+  }
+}
+
+.btn-rounded {
+  border-radius: 20px;
+}
+
+.btn-sm {
+  @extend %__btn;
+  font-size: 11px;
+  padding: 4px;
+  max-height: 24px;
+}
+
+.btn {
+  @extend %__btn;
+  font-size: 14px;
+  padding: 3px 6px;
+  max-height: 32px;
+}
+
+.btn-lg {
+  @extend %__btn;
+  font-size: 20px;
+  padding: 10px;
+  max-height: 46px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+
+  &-inverse {
+    background-color: #fff;
+    color: $primary;
+  }
+}
+
+.btn-success {
+  background-color: $success;
+  color: #fff;
+
+  &-inverse {
+    background-color: #fff;
+    color: $success;
+  }
+}
+
+.btn-danger {
+  background-color: $danger;
+  color: #fff;
+
+  &-inverse {
+    background-color: #fff;
+    color: $danger;
+  }
+}
+
+.btn-default {
+  background-color: $grey;
+  color: #000;
+
+  &-inverse {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+%__btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.btn-group {
+  @extend %__btn-group;
+  flex-direction: row;
+
+  .btn-primary {
+    &:first-child {
+      border-left: none;
+    }
+    border-left: solid 1px $primary-border-color;
+  }
+
+  .btn-danger {
+    &:first-child {
+      border-left: none;
+    }
+    border-left: solid 1px $danger-border-color;
+  }
+
+  .btn-success {
+    &:first-child {
+      border-left: none;
+    }
+    border-left: solid 1px $success-border-color;
+  }
+
+  .btn-default {
+    &:first-child {
+      border-left: none;
+    }
+    border-left: solid 1px $default-border-color;
+  }
+}
+
+.btn-group-vertical {
+  @extend %__btn-group;
+  flex-direction: column;
+
+  .btn-primary {
+    &:first-child {
+      border-top: none;
+    }
+    border-top: solid 1px $primary-border-color;
+  }
+
+  .btn-danger {
+    &:first-child {
+      border-top: none;
+    }
+    border-top: solid 1px $danger-border-color;
+  }
+
+  .btn-success {
+    &:first-child {
+      border-top: none;
+    }
+    border-top: solid 1px $success-border-color;
+  }
+
+  .btn-default {
+    &:first-child {
+      border-top: none;
+    }
+    border-top: solid 1px $default-border-color;
+  }
+}

@@ -1,0 +1,131 @@
+.form {
+  .form-title {
+    display: flex;
+    background-color: $blue;
+    margin: -1rem -1rem 0 -1rem;
+    padding: 2rem;
+    color: $white;
+
+    * {
+      font-size: 1.8rem;
+    }
+  }
+
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 1rem 1rem 0 1rem;
+
+    button {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.form-group-block {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.54);
+  border-color: $grey;
+}
+
+.control-label {
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.input-group {
+  flex-direction: row;
+  margin-left: -0.5rem;
+
+  .input-tag {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.3rem;
+    align-items: center;
+  }
+}
+
+.input-text {
+  height: 35px;
+  border: none;
+
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: solid 1.5px;
+  border-color: inherit;
+
+  &:focus {
+    border-bottom: solid 2px $blue;
+  }
+
+  &::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  &:-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  &::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  &:-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+}
+
+.select {
+  font-family: Roboto, Lato, sans-serif;
+  display: flex;
+  margin-left: -0.1rem;
+  font-size: 1.3rem;
+}
+
+.text-area {
+  font-family: Roboto, Lato, sans-serif;
+  font-size: 1.4rem;
+
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 100px;
+  max-height: 300px;
+  padding: 0.2rem;
+  resize: vertical;
+  overflow: auto;
+
+  border: none;
+  border-bottom: solid 1.5px;
+  border-color: inherit;
+
+  &:focus {
+    border-bottom: solid 2px $blue;
+  }
+}
+
+.has-feedback {
+  position: relative;
+
+  .input-text, .text-area {
+    padding-right: 1.8rem !important;
+  }
+}
+
+.input-feedback {
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+}
+
+.help-block {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
