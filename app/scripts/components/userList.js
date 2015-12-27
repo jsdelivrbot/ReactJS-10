@@ -1,8 +1,10 @@
 import React from "react";
-import User from "/dist/app/scripts/components/user";
-import Subscriber from "dist/app/scripts/flux/Subscriber";
+import User from "app/scripts/components/user";
+import Subscriber from "app/scripts/flux/Subscriber";
 
 var timeout;
+
+
 
 class UserList extends React.Component {
   constructor(props) {
@@ -78,7 +80,7 @@ class UserList extends React.Component {
 
   render() {
     var usersAsNodes = this.props.users.map((user, index) => {
-      return (<User key={index} order={index} userData={user} />);
+      return (<User key={user.id} order={index} userData={user} />);
     });
     var view = this._render();
     return (

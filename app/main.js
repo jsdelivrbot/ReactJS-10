@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserList from 'dist/app/scripts/components/userList';
-import Subscriber from 'dist/app/scripts/flux/Subscriber';
+import UserList from 'app/scripts/components/userList';
+import Subscriber from 'app/scripts/flux/Subscriber';
 
 (() => {
   class App extends React.Component {
     constructor() {
       super();
       this.users = [
-        {firstname: "Taner", surname: "Gokalp", country: "Turkey", age: 25, gender: "Male"},
-        {firstname: "John", surname: "Doe", country: "United States", age: 20, gender: "Male"},
-        {firstname: "François", surname: "Bregerie", country: "France", age: 35, gender: "Male"},
-        {firstname: "Francesco", surname: "Potelli", country: "Italy", age: 40, gender: "Male"},
-        {firstname: "Fabian", surname: "Zilinski", country: "Germany", age: 25, gender: "Male"}
+        {id: 1, firstname: "Taner", surname: "Gokalp", country: "Turkey", age: 25, gender: "Male"},
+        {id: 2, firstname: "John", surname: "Doe", country: "United States", age: 20, gender: "Male"},
+        {id: 3, firstname: "François", surname: "Bregerie", country: "France", age: 35, gender: "Male"},
+        {id: 4, firstname: "Francesco", surname: "Potelli", country: "Italy", age: 40, gender: "Male"},
+        {id: 5, firstname: "Fabian", surname: "Zilinski", country: "Germany", age: 25, gender: "Male"}
       ];
 
       this.store = new Subscriber().createStore("UserList").getStore("UserList");

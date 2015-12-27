@@ -1,6 +1,6 @@
 import React from "react";
-import Dropdown from "dist/app/scripts/components/dropdown";
-import Subscriber from "dist/app/scripts/flux/Subscriber";
+import Dropdown from "app/scripts/components/dropdown";
+import Subscriber from "app/scripts/flux/Subscriber";
 
 class User extends React.Component {
   constructor(props) {
@@ -37,9 +37,9 @@ class User extends React.Component {
 
   _render() {
     if (this.state.inEditMode) {
-      var inputsAsNodes = Object.keys(this.props.userData).map((userDataProp, index) => {
+      var inputsAsNodes = Object.keys(this.props.userData).map((userDataProp) => {
         return (
-            <div key={index} className="col-12">
+            <div className="col-12">
               <label>{userDataProp} :</label>&nbsp;
               <input type="text" name={userDataProp} defaultValue={this.props.userData[userDataProp]} />
             </div>
@@ -64,7 +64,7 @@ class User extends React.Component {
               {this.props.userData.country === "Turkey" ? <strong>(Cool Mate!)</strong> : null}
             </span>
           </div>
-          <Dropdown user={this.props.userData} />
+          <Dropdown key={this.props.order} user={this.props.userData} />
         </div>
       );
     }
